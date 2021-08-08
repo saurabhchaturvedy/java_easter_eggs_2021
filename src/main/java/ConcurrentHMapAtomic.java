@@ -3,6 +3,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class ConcurrentHMapAtomic {
@@ -31,6 +32,9 @@ public class ConcurrentHMapAtomic {
         orders.put("pune",new AtomicLong());
         orders.put("mumbai",new AtomicLong());
         orders.put("gurgaon",new AtomicLong());
+
+
+        AtomicInteger atomicInteger = new AtomicInteger();
 
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
