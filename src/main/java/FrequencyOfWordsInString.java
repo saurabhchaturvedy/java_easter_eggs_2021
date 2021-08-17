@@ -18,16 +18,16 @@ public class FrequencyOfWordsInString {
 
         }
 
-        Map<String, Integer> sortedFrequencyMap = new TreeMap<String, Integer>((e1, e2) -> {
+        Map<String, Integer> sortedFrequencyMap = new TreeMap<String, Integer>((k1, k2) -> {
 
-            Integer num1 = frequencyMap.get(e1);
-            Integer num2 = frequencyMap.get(e2);
+            Integer v1 = frequencyMap.get(k1);
+            Integer v2 = frequencyMap.get(k2);
 
-            if (!num1.equals(num2)) {
-                return num2 - num1;
+            if (!v1.equals(v2)) {
+                return v2 - v1;
             }
 
-            return e1.compareTo(e2);
+            return k1.compareTo(k2);
         });
 
 
